@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <title>The Feijuca - Monte sua Feijoada Premium</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <div class="logo-container">
+        <img src="img/logo-the-feijuca.jpg" alt="Logo The Feijuca"/>
+        <p class="tagline">Monte do seu jeito</p>
+      </div>
+    </header>
+    
+    <main class="order-container">
+      <!-- Step indicators -->
+      <div class="step-indicator">
+        <div class="step active" data-step="1">1</div>
+        <div class="step-line"></div>
+        <div class="step" data-step="2">2</div>
+        <div class="step-line"></div>
+        <div class="step" data-step="3">3</div>
+        <div class="step-line"></div>
+        <div class="step" data-step="4">4</div>
+      </div>
+      
+      <!-- Steps Content -->
+      <div class="steps-content">
+        <!-- Step 1: Size Selection -->
+        <section class="step-content active" id="step-1">
+          <h2 class="step-title">Escolha o tamanho</h2>
+          <p class="step-description">Selecione o tamanho ideal para sua feijoada</p>
+          
+          <div class="options-container">
+            <div class="option-card" data-option="tamanho" data-value="media">
+              <div class="option-image">
+                <img src="img/feijoada.png" alt="Feijoada Média">
+              </div>
+              <div class="option-info">
+                <h3>Feijoada Média</h3>
+                <span class="price">R$ 17,90</span>
+              </div>
+            </div>
+            
+            <div class="option-card" data-option="tamanho" data-value="grande">
+              <div class="option-image">
+                <img src="img/feijoada.png" alt="Feijoada Grande">
+              </div>
+              <div class="option-info">
+                <h3>Feijoada Grande</h3>
+                <span class="price">R$ 19,90</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Step 2: Couve Selection -->
+        <section class="step-content" id="step-2">
+          <h2 class="step-title">Escolha a couve</h2>
+          <p class="step-description">Como você prefere sua couve?</p>
+          
+          <div class="options-container">
+            <div class="option-card" data-option="couve" data-value="crua">
+              <div class="option-image">
+                <img src="img/couve-crua.png" alt="Couve Crua">
+              </div>
+              <div class="option-info">
+                <h3>Couve Crua</h3>
+                <p>Cortada finamente</p>
+              </div>
+            </div>
+            
+            <div class="option-card" data-option="couve" data-value="refogada">
+              <div class="option-image">
+                <img src="img/couve-refogada.png" alt="Couve Refogada">
+              </div>
+              <div class="option-info">
+                <h3>Couve Refogada</h3>
+                <p>Salteada no alho</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Step 3: Farofa Selection -->
+        <section class="step-content" id="step-3">
+          <h2 class="step-title">Escolha a farofa</h2>
+          <p class="step-description">Qual farofa combina com sua feijoada?</p>
+          
+          <div class="options-container">
+            <div class="option-card" data-option="farofa" data-value="bacon">
+              <div class="option-image">
+                <img src="img/farofa-bacon.jpeg" alt="Farofa com Bacon">
+              </div>
+              <div class="option-info">
+                <h3>Farofa com Bacon</h3>
+                <p>Crocante e defumada</p>
+              </div>
+            </div>
+            
+            <div class="option-card" data-option="farofa" data-value="cebola">
+              <div class="option-image">
+                <img src="img/farofa-cebola.jpeg" alt="Farofa Prime de Cebola">
+              </div>
+              <div class="option-info">
+                <h3>Farofa Prime de Cebola</h3>
+                <p>Cebola e cubinhos de Calabresa</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Step 4: Additional Items -->
+        <section class="step-content" id="step-4">
+          <h2 class="step-title">Itens adicionais</h2>
+          <p class="step-description">Complete sua feijoada com estes acompanhamentos</p>
+          
+          <div class="options-container extras-container">
+            <div class="option-card toggle-card" data-option="vinagrete" data-value="sim">
+              <div class="option-image">
+                <img src="img/vinagrete.png" alt="Vinagrete">
+              </div>
+              <div class="option-info">
+                <h3>Vinagrete</h3>
+                <p>Refrescante e tradicional</p>
+              </div>
+              <div class="toggle-switch">
+                <span class="toggle-text">Não</span>
+                <label class="switch">
+                  <input type="checkbox" data-toggle="vinagrete">
+                  <span class="slider round"></span>
+                </label>
+                <span class="toggle-text">Sim</span>
+              </div>
+            </div>
+            
+            <div class="option-card toggle-card" data-option="torresmo" data-value="sim">
+              <div class="option-image">
+                <img src="img/torresmo.png" alt="Torresmo">
+              </div>
+              <div class="option-info">
+                <h3>Torresmo</h3>
+                <p>Crocante e saboroso</p>
+              </div>
+              <div class="toggle-switch">
+                <span class="toggle-text">Não</span>
+                <label class="switch">
+                  <input type="checkbox" data-toggle="torresmo">
+                  <span class="slider round"></span>
+                </label>
+                <span class="toggle-text">Sim</span>
+              </div>
+            </div>
+
+            <div class="option-card toggle-card" data-option="costelinha" data-value="sim">
+              <div class="option-image">
+                <img src="img/costelinha-de-porco.jpeg" alt="costelinha">
+              </div>
+              <div class="option-info">
+                <h3>Costelinha</h3>
+                <p>Costelinha de Porco (cortesia)</p>
+              </div>
+              <div class="toggle-switch">
+                <span class="toggle-text">Não</span>
+                <label class="switch">
+                  <input type="checkbox" data-toggle="costelinha">
+                  <span class="slider round"></span>
+                </label>
+                <span class="toggle-text">Sim</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Order Summary -->
+        <section class="step-content" id="summary">
+          <h2 class="step-title">Sua feijoada está pronta!</h2>
+          <div class="summary-container">
+            <div class="summary-image">
+              <img src="https://images.pexels.com/photos/5710170/pexels-photo-5710170.jpeg" alt="Feijoada Completa">
+            </div>
+            <div class="summary-details">
+              <h3>Resumo do Pedido</h3>
+              <ul id="order-items"></ul>
+              <div class="summary-price">
+                <span>Total:</span>
+                <span id="total-price">R$ 0,00</span>
+              </div>
+
+              <div style="
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+              ">
+                <a class="navigation-button primary-button" href="/" 
+                  style="text-decoration: none;padding: 5px; font-weight: 400;"
+                  >
+                  Refazer o pedido
+                </a>
+                <button class="primary-button" id="finish-order">Confirmar Pedido</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <!-- Navigation -->
+      <div class="navigation-container">
+        <button class="navigation-button" id="back-button" disabled>Voltar</button>
+        <button class="navigation-button primary-button" id="next-button">Avançar</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal" id="success-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Pedido Realizado!</h2>
+      </div>
+      <div class="modal-body">
+        <p>Sua feijoada foi enviada para preparo.</p>
+        <p>Tempo estimado até: <strong>45 minutos</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button class="primary-button" onclick="callWhatsapp()">Finalizar Pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
